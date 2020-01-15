@@ -9,10 +9,6 @@ const connect = function(ip) {
   conn.on('connect', () => {
     console.log('connection 2 snek established!');
     conn.write('Name: MRG');
-    
-    setInterval(() => {
-      conn.write('Move: up');
-    }, 100);
 
   });
   conn.setEncoding('utf8');
@@ -24,5 +20,9 @@ const connect = function(ip) {
 
   return conn;
 }
+
+// setInterval(() => {
+//   conn.write('Move: up');
+// }, 100);
 
 module.exports = { connect };
